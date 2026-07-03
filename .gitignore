@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfplan
+terraform.tfvars
+.terraform.lock.hcl
+*.pem
+*.pub
+aks_project_key
