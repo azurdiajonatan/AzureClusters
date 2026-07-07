@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>AKS Project - DevOps Junction</title>
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          background: #0f1117;
+          color: #e0e0e0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+        }
+        .card {
+          background: #1a1d27;
+          border: 1px solid #2a2d3e;
+          border-radius: 16px;
+          padding: 48px 56px;
+          max-width: 640px;
+          width: 90%;
+          text-align: center;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .badge {
+          display: inline-block;
+          background: #1e3a5f;
+          color: #60a5fa;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          padding: 6px 16px;
+          border-radius: 999px;
+          margin-bottom: 28px;
+        }
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin-bottom: 12px;
+          line-height: 1.2;
+        }
+        h1 span { color: #60a5fa; }
+        p {
+          color: #94a3b8;
+          font-size: 1rem;
+          line-height: 1.7;
+          margin-bottom: 32px;
+        }
+        .stack {
+          display: flex;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: wrap;
+          margin-bottom: 36px;
+        }
+        .tag {
+          background: #0f2744;
+          color: #93c5fd;
+          border: 1px solid #1e40af;
+          border-radius: 8px;
+          padding: 6px 14px;
+          font-size: 13px;
+          font-weight: 500;
+        }
+        .footer {
+          border-top: 1px solid #2a2d3e;
+          padding-top: 24px;
+          font-size: 13px;
+          color: #475569;
+        }
+        .dot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: #22c55e;
+          border-radius: 50%;
+          margin-right: 6px;
+          animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <div class="badge">MOD_04 · DevOps Junction</div>
+        <h1>Desplegado en <span>Azure AKS</span></h1>
+        <p>
+          Aplicación corriendo en un clúster de Kubernetes en Azure,
+          aprovisionado con Terraform e implementando infraestructura como código.
+        </p>
+        <div class="stack">
+          <span class="tag">Terraform</span>
+          <span class="tag">Azure AKS</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">nginx</span>
+          <span class="tag">LoadBalancer</span>
+        </div>
+        <div class="footer">
+          <span class="dot"></span>
+          Cluster activo · eastus · Node: Standard_D2s_v7
+        </div>
+      </div>
+    </body>
+    </html>
